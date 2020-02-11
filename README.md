@@ -1,2 +1,17 @@
-# Less_Leak_Doc
-本篇文章  分析查看内存泄漏的问题
+# 内存泄漏调试
+
+#### 生成Hprof
+```
+adb shell am dumpheap package /data/local/tmp/less.hprof
+```
+
+#### 拷贝文件到 电脑
+```
+adb pull /data/local/tmp/less.hprof
+```
+
+#### 转换格式
+```
+hprof-conv less.hprof ok.hprof
+```
+
